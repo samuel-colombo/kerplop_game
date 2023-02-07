@@ -23,19 +23,8 @@ public class LevelSetup {
 	}
 	
 	public void createLevel(int num) {
-		if (num==1) {
-			this.levelNum = 1;
-			this.startLoc = 4;
-			this.board[1] = new Rock();
-			this.board[11] = new Rock();
-			Tiger tiggy = new Tiger(10);
-			this.interactingPieces.add(tiggy);
-			this.movingPieces.add(tiggy);
-			this.board[10] = tiggy;
-		} else if (num==2) {
-			this.levelNum = 2;
-			this.startLoc = 4;
-		}
+		if (num==1) this.playLevelOne();
+			
 	}
 	
 	public Drawable[] getBoard() {
@@ -52,5 +41,58 @@ public class LevelSetup {
 	
 	public int getPlayerStartLoc() {
 		return this.startLoc;
+	}
+	
+	public void playLevelOne() {
+		this.levelNum=1;
+		this.startLoc=1;
+		
+		//create Goal
+		Goal goal = new Goal(8);
+		this.board[8] = goal;
+		this.interactingPieces.add(goal);
+		
+		//create rocks
+		this.board[3] = new Rock();
+		this.board[19] = new Rock();
+		
+		//create Bull
+		Bull billy = new Bull(15,'L');
+		this.board[15] = billy;
+		this.interactingPieces.add(billy);
+		this.movingPieces.add(billy);
+		
+		//create Sinkhole
+		Sinkhole sandy = new Sinkhole(17);
+		this.board[17] = sandy;
+		this.interactingPieces.add(sandy);
+	}
+	
+	public void playLevelTwo() {
+		this.levelNum=2;
+		this.startLoc=10;
+
+		//create Goal
+		Goal goal = new Goal(6);
+		this.board[6] = goal;
+		this.interactingPieces.add(goal);
+		
+		//create rocks
+		this.board[8] = new Rock();
+		this.board[3] = new Rock();
+		
+		
+		//create motorcyclist
+		Motorcyclist mildred = new Motorcyclist('5');
+		this.board[5] = mildred;
+		this.interactingPieces.add(mildred);
+		this.movingPieces.add(mildred);
+		
+		//create ninja
+		Ninja ned = new Ninja(19);
+		this.board[19] = ned;
+		this.interactingPieces.add(ned);
+		this.movingPieces.add(ned);
+		
 	}
 }
