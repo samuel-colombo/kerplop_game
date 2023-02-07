@@ -1,0 +1,14 @@
+I, Samuel Colombo, certify that I participated equitably in the creation of assignment C07A, dated 2023.
+I, Duan Nguyen, certify that I participated equitably in the creation of this assignment C07A, dated 2023.
+
+commit 284642927bcbcd4acda7e914d9a9c6685734ccfa
+Author: Samuel Colombo <sam@softwarfare.com>
+Date:   Mon Feb 6 21:09:23 2023 -0700
+
+    Checkpoint Commit #2 -> main
+
+commit 7aa8a266eb4c6705c90228ea861618f3eb51334a
+Author: Samuel Colombo <sam@softwarfare.com>
+Date:   Sun Feb 5 16:53:41 2023 -0700
+
+    initial commit
